@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task 2 Magazine Float</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background: #f0f0f0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 30px;
+        }
+        h2 {
+            color: #444;
+            margin: 20px 0 10px;
+        }
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+        .sidebar {
+            float: left;
+            width: 30%;
+            background: #ecf0f1;
+            padding: 20px;
+            margin-right: 20px;
+        }
+        .main-content {
+            float: left;
+            width: 65%;
+            background: #f9f9f9;
+            padding: 20px;
+        }
+        .article-img {
+            float: left;
+            width: 200px;
+            height: 150px;
+            background: #3498db;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 20px 10px 0;
+        }
+        .column {
+            float: left;
+            width: 31.33%;
+            background: #bdc3c7;
+            padding: 20px;
+            margin: 1%;
+        }
+        @media (max-width: 768px) {
+            .sidebar, .main-content, .column {
+                float: none;
+                width: 100%;
+                margin: 10px 0;
+            }
+            .article-img {
+                float: none;
+                margin: 0 auto 20px;
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Task 2 Magazine Layout</h1>
+        
+        <div class="clearfix">
+            <div class="sidebar">
+                <h2>Sidebar</h2>
+                <p>Sidebar content here</p>
+            </div>
+            <div class="main-content">
+                <h2>Main Article</h2>
+                <div class="clearfix">
+                    <div class="article-img">Image</div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                </div>
+            </div>
+        </div>
+        
+        <h2>Multi-Column Text</h2>
+        <div class="clearfix">
+            <div class="column">Column 1</div>
+            <div class="column">Column 2</div>
+            <div class="column">Column 3</div>
+        </div>
+    </div>
+</body>
+</html>

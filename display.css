@@ -1,0 +1,43 @@
+.block {
+    display: block;
+    background: #e74c3c;
+    color: white;
+    padding: 10px;
+    margin: 5px;
+}
+.inline {
+    display: inline;
+    background: #3498db;
+    color: white;
+    padding: 5px;
+    margin: 2px;
+}
+.inline-block {
+    display: inline-block;
+    background: #2ecc71;
+    color: white;
+    padding: 10px;
+    margin: 5px;
+    width: 100px;
+}
+.table {
+    display: table;
+    width: 100%;
+    border: 1px solid #333;
+}
+.row {
+    display: table-row;
+}
+.cell {
+    display: table-cell;
+    padding: 10px;
+    border: 1px solid #333;
+}
+.hide-mobile {
+    display: block;
+}
+@media (max-width: 768px) {
+    .hide-mobile {
+        display: none;
+    }
+}

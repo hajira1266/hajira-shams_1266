@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task 9 Dashboard</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background: #f0f0f0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 30px;
+        }
+        .dashboard {
+            display: grid;
+            grid-template-columns: 250px 1fr;
+            gap: 20px;
+        }
+        .sidebar {
+            background: #2c3e50;
+            color: white;
+            padding: 20px;
+        }
+        .sidebar ul {
+            list-style: none;
+            margin-top: 20px;
+        }
+        .sidebar li a {
+            color: white;
+            text-decoration: none;
+            display: block;
+            padding: 10px;
+        }
+        .sidebar li a:hover {
+            background: #34495e;
+        }
+        .main {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .header {
+            background: #ecf0f1;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .stats {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .stat-card {
+            flex: 1 1 200px;
+            background: #f9f9f9;
+            padding: 20px;
+            border: 1px solid #ddd;
+        }
+        .stat-card h3 {
+            color: #666;
+            font-size: 14px;
+        }
+        .stat-card p {
+            font-size: 24px;
+            font-weight: bold;
+            color: #3498db;
+        }
+        .content {
+            background: #f9f9f9;
+            padding: 20px;
+            min-height: 300px;
+        }
+        @media (max-width: 768px) {
+            .dashboard {
+                grid-template-columns: 1fr;
+            }
+            .sidebar {
+                display: none;
+            }
+            .sidebar.active {
+                display: block;
+                position: fixed;
+                width: 250px;
+                height: 100%;
+                z-index: 100;
+            }
+            .stats {
+                flex-direction: column;
+            }
+            .stat-card {
+                flex: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Task 9 Dashboard Layout</h1>
+        
+        <div class="dashboard">
+            <div class="sidebar">
+                <h2>Dashboard</h2>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Analytics</a></li>
+                    <li><a href="#">Users</a></li>
+                    <li><a href="#">Settings</a></li>
+                </ul>
+            </div>
+            <div class="main">
+                <div class="header">
+                    <h2>Welcome back</h2>
+                    <button onclick="document.querySelector('.sidebar').classList.toggle('active')">Menu</button>
+                </div>
+                <div class="stats">
+                    <div class="stat-card"><h3>Users</h3><p>1,234</p></div>
+                    <div class="stat-card"><h3>Sales</h3><p>$5,678</p></div>
+                    <div class="stat-card"><h3>Orders</h3><p>456</p></div>
+                </div>
+                <div class="content">
+                    <h3>Main Content Area</h3>
+                    <p>Dashboard content goes here.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

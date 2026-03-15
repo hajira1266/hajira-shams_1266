@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Float Exercises</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background: #f4f4f4;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+        }
+        h1 {
+            margin-bottom: 30px;
+            color: #333;
+        }
+        .exercise {
+            background: #f9f9f9;
+            padding: 20px;
+            margin: 20px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+        .box {
+            float: left;
+            width: 30%;
+            background: #3498db;
+            color: white;
+            padding: 20px;
+            margin: 1%;
+            text-align: center;
+        }
+        .right {
+            float: right;
+        }
+        .sidebar {
+            float: left;
+            width: 30%;
+            background: #e74c3c;
+            color: white;
+            padding: 20px;
+        }
+        .content {
+            float: left;
+            width: 70%;
+            background: #2ecc71;
+            color: white;
+            padding: 20px;
+        }
+        @media (max-width: 768px) {
+            .box, .sidebar, .content {
+                float: none;
+                width: 100%;
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Float Layout Exercises</h1>
+        
+        <div class="exercise">
+            <h2>Exercise 1: Float Left</h2>
+            <div class="clearfix">
+                <div class="box">Box 1</div>
+                <div class="box">Box 2</div>
+                <div class="box">Box 3</div>
+            </div>
+        </div>
+        
+        <div class="exercise">
+            <h2>Exercise 2: Float Right</h2>
+            <div class="clearfix">
+                <div class="box right">Right 1</div>
+                <div class="box right">Right 2</div>
+            </div>
+        </div>
+        
+        <div class="exercise">
+            <h2>Exercise 3: Sidebar + Content</h2>
+            <div class="clearfix">
+                <div class="sidebar">Sidebar</div>
+                <div class="content">Main Content</div>
+            </div>
+        </div>
+        
+        <div class="exercise">
+            <h2>Exercise 4: Responsive Floats</h2>
+            <p>Resize browser - floats become stacked on mobile.</p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,38 @@
+.relative {
+    position: relative;
+    background: #3498db;
+    color: white;
+    padding: 20px;
+    margin: 20px;
+}
+.absolute {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    background: #e74c3c;
+    color: white;
+    padding: 10px;
+}
+.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #2c3e50;
+    color: white;
+    padding: 10px;
+    z-index: 100;
+}
+.sticky {
+    position: sticky;
+    top: 0;
+    background: #27ae60;
+    color: white;
+    padding: 10px;
+    z-index: 50;
+}
+@media (max-width: 768px) {
+    .fixed {
+        position: static;
+    }
+}

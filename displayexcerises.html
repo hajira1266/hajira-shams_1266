@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task 1 Display Property</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background: #f0f0f0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 30px;
+        }
+        h2 {
+            color: #444;
+            margin: 25px 0 15px;
+        }
+        .section {
+            background: #f9f9f9;
+            padding: 20px;
+            margin: 20px 0;
+            border: 1px solid #ddd;
+        }
+        .block {
+            display: block;
+            background: #e74c3c;
+            color: white;
+            padding: 10px;
+            margin: 5px;
+        }
+        .inline {
+            display: inline;
+            background: #3498db;
+            color: white;
+            padding: 5px;
+            margin: 2px;
+        }
+        .inline-block {
+            display: inline-block;
+            background: #2ecc71;
+            color: white;
+            padding: 10px;
+            margin: 5px;
+            width: 100px;
+        }
+        .table {
+            display: table;
+            width: 100%;
+            border: 2px solid #333;
+            margin: 10px 0;
+        }
+        .row {
+            display: table-row;
+        }
+        .cell {
+            display: table-cell;
+            padding: 15px;
+            border: 1px solid #333;
+            background: #ecf0f1;
+        }
+        .hide-mobile {
+            background: #f39c12;
+            color: white;
+            padding: 15px;
+        }
+        .show-mobile {
+            background: #9b59b6;
+            color: white;
+            padding: 15px;
+            display: none;
+        }
+        @media (max-width: 768px) {
+            .inline {
+                display: block;
+                margin: 5px 0;
+            }
+            .inline-block {
+                display: block;
+                width: 100%;
+            }
+            .hide-mobile {
+                display: none;
+            }
+            .show-mobile {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Task 1 Display Property</h1>
+        
+        <div class="section">
+            <h2>Block Elements</h2>
+            <div class="block">Block 1</div>
+            <div class="block">Block 2</div>
+            <div class="block">Block 3</div>
+        </div>
+        
+        <div class="section">
+            <h2>Inline Elements</h2>
+            <span class="inline">Inline 1</span>
+            <span class="inline">Inline 2</span>
+            <span class="inline">Inline 3</span>
+        </div>
+        
+        <div class="section">
+            <h2>Inline-Block Elements</h2>
+            <div class="inline-block">IB 1</div>
+            <div class="inline-block">IB 2</div>
+            <div class="inline-block">IB 3</div>
+        </div>
+        
+        <div class="section">
+            <h2>Table Display</h2>
+            <div class="table">
+                <div class="row">
+                    <div class="cell">Row 1 Cell 1</div>
+                    <div class="cell">Row 1 Cell 2</div>
+                </div>
+                <div class="row">
+                    <div class="cell">Row 2 Cell 1</div>
+                    <div class="cell">Row 2 Cell 2</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>Hidden Elements</h2>
+            <div class="hide-mobile">Hides on mobile</div>
+            <div class="show-mobile">Shows only on mobile</div>
+        </div>
+    </div>
+</body>
+</html>

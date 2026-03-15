@@ -1,0 +1,53 @@
+/* Task 17: Responsive Utility Classes */
+
+/* Hide/Show at different breakpoints */
+.hide-mobile { display: block; }
+.show-mobile { display: none; }
+.hide-tablet { display: block; }
+.show-tablet { display: none; }
+.hide-desktop { display: block; }
+.show-desktop { display: none; }
+
+/* Responsive Spacing */
+.m-0 { margin: 0; }
+.m-10 { margin: 10px; }
+.m-20 { margin: 20px; }
+.p-0 { padding: 0; }
+.p-10 { padding: 10px; }
+.p-20 { padding: 20px; }
+
+/* Text Alignment */
+.text-left { text-align: left; }
+.text-center { text-align: center; }
+.text-right { text-align: right; }
+
+/* Flexbox Utilities */
+.flex { display: flex; }
+.flex-col { flex-direction: column; }
+.flex-wrap { flex-wrap: wrap; }
+.justify-center { justify-content: center; }
+.justify-between { justify-content: space-between; }
+.items-center { align-items: center; }
+.gap-10 { gap: 10px; }
+.gap-20 { gap: 20px; }
+
+/* Mobile (up to 768px) */
+@media (max-width: 768px) {
+    .hide-mobile { display: none; }
+    .show-mobile { display: block; }
+    .text-left-mobile { text-align: left; }
+    .text-center-mobile { text-align: center; }
+    .flex-mobile { flex-direction: column; }
+}
+
+/* Tablet (768px to 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .hide-tablet { display: none; }
+    .show-tablet { display: block; }
+}
+
+/* Desktop (1025px and above) */
+@media (min-width: 1025px) {
+    .hide-desktop { display: none; }
+    .show-desktop { display: block; }
+}
